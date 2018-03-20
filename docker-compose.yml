@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  lab-survey-front:
+    image: labsurveyfront
+    container_name: lab-survey-front
+    build:
+      context: .
+      dockerfile: lab-survey-front/Dockerfile
+    environment:
+      REDIS: lab-survey-redis
+
+  lab-survey-redis:
+    image: redis
+    container_name: lab-survey-redis
+    ports:
+        - "6379:6379"
