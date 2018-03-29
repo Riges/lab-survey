@@ -16,7 +16,7 @@ class App extends React.Component {
           </Row>
           <Row>
             <Col>
-              <p className="intro">Bienvenue sur la sondage de ce TechLabs. Il servira à connaitre votre avancée.</p>
+              <p className="intro">Bienvenue sur le sondage de ce TechLabs. Il servira à connaitre votre avancée.</p>
             </Col>
           </Row>
           <Row>
