@@ -9,7 +9,7 @@ const surveyEpic = (action$: ActionsObservable<StepCompleted>, store: Store<Appl
   action$.ofType(SurveyActionKind.StepCompleted).mergeMap(action =>
     ajax
       .post(
-        './api',
+        '/api',
         { ...store.getState().survey, completedSteps: store.getState().survey.completedSteps.toObject() },
         { 'Content-Type': 'application/json' }
       )
