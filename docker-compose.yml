@@ -2,7 +2,7 @@ version: '3'
 
 services:
   lab-survey-front:
-    image: labsurveyfront
+    image: lab-survey-front
     container_name: lab-survey-front
     build:
       context: .
@@ -16,3 +16,5 @@ services:
   lab-survey-redis:
     image: redis
     container_name: lab-survey-redis
+    ports:
+        - "6379:6379"
