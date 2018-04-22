@@ -9,7 +9,7 @@ using StackExchange.Redis;
 
 namespace lab_survey_front.Controllers
 {
-    [Route("api")]
+    [Route("/")]
     public class ApiController : Controller
     {
         private readonly ConnectionMultiplexer redis;
