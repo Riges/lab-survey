@@ -1,7 +1,8 @@
 FROM node:8-alpine AS builder
 WORKDIR /app
-COPY . .
+COPY package.json yarn.lock ./
 RUN yarn install
+COPY . .
 RUN yarn run build
 
 FROM nginx:alpine
