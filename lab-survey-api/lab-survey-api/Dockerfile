@@ -1,4 +1,4 @@
-﻿FROM microsoft/aspnetcore-build:2.0.6-2.1.101 AS build-env
+﻿FROM microsoft/dotnet:2.1-sdk-alpine AS build-env
 WORKDIR /src
 COPY lab-survey-api.csproj .
 RUN dotnet restore
@@ -6,7 +6,7 @@ COPY . .
 RUN dotnet publish -c Release -o out
 
 # build runtime image
-FROM microsoft/aspnetcore:2.0.6
+FROM microsoft/dotnet:2.1-aspnetcore-runtime-alpine
 WORKDIR /app
 COPY --from=build-env /src/out ./
 ENV ASPNETCORE_URLS=http://+:5000
