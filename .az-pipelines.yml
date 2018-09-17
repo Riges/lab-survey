@@ -5,19 +5,23 @@ variables:
 trigger:
   - master
 jobs:
-  - job: Linux
+  - job: Docker lab-survey-front
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
       - task: Docker@1
-        displayName: 'Build front image'
+        displayName: 'Build docker image'
         inputs:
           dockerFile: ./lab-survey-front/Dockerfile
           imageName: $(imageNameFront)
           workingDirectory: ./lab-survey-front
+  - job: Docker lab-survey-api
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
       - task: Docker@1
-        displayName: 'Build api image'
+        displayName: 'Build docker image'
         inputs:
           dockerFile: ./lab-survey-api/lab-survey-api/Dockerfile
           imageName: $(imageNameApi)
-          workingDirectory: ./lab-survey-api/lab-s  urvey-api/
+          workingDirectory: ./lab-survey-api/lab-survey-api/
