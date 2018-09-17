@@ -1,7 +1,8 @@
-name: 1.0.$(date:yyyyMMdd)$(rev:.rr)
 variables:
-  imageNameFront: lab-survey-front:1.0.$(date:yyyyMMdd)$(rev:.rr)
-  imageNameApi: lab-survey-api:1.0.$(date:yyyyMMdd)$(rev:.rr)
+  appVersion: 1.0.$(date:yyyyMMdd).$(rev:.rr)
+  imageNameFront: lab-survey-front
+  imageNameApi: lab-survey-api
+name: 1.0.$(date:yyyyMMdd).$(rev:.rr)
 jobs:
   - job: Linux
     pool:
@@ -11,11 +12,11 @@ jobs:
         displayName: 'Build front image'
         inputs:
           dockerFile: ./lab-survey-front/Dockerfile
-          imageName: $(imageNameFront)
+          imageName: $(imageNameFront):$(appVersion)
           workingDirectory: ./lab-survey-front
       - task: Docker@1
         displayName: 'Build api image'
         inputs:
           dockerFile: ./lab-survey-api/lab-survey-api/Dockerfile
-          imageName: $(imageNameApi)
+          imageName: $(imageNameApi):$(appVersion)
           workingDirectory: ./lab-survey-api/lab-survey-api/
