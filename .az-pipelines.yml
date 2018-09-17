@@ -5,7 +5,7 @@ variables:
 trigger:
   - master
 jobs:
-  - job: 'Docker lab survey front'
+  - job: LabSurveyFront
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
@@ -15,7 +15,7 @@ jobs:
           dockerFile: ./lab-survey-front/Dockerfile
           imageName: $(imageNameFront)
           workingDirectory: ./lab-survey-front
-  - job: 'Docker lab survey api'
+  - job: LabSurveyApi
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
