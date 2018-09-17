@@ -1,11 +1,9 @@
 name: 1.0.$(date:yyyyMMdd)$(rev:.rrr)
-trigger:
-  branches:
-    include:
-      - master
 variables:
   imageNameFront: lab-survey-front:$(Build.BuildNumber)
   imageNameApi: lab-survey-api:$(Build.BuildNumber)
+trigger:
+  - master
 jobs:
   - job: Linux
     pool:
