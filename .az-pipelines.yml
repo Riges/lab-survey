@@ -1,19 +1,12 @@
 variables:
-  appVersion: '1.0.$(date:yyyyMMdd)$(rev:.rr)'
-  imageNameFront: 'lab-survey-front:$(appVersion)'
-  imageNameApi: 'lab-survey-api:$(appVersion)'
-name: $(appVersion)
+  imageNameFront: lab-survey-front:$(Build.BuildNumber)
+  imageNameApi: lab-survey-api:$(Build.BuildNumber)
+name: 1.0.$(date:yyyyMMdd)$(rev:.rrr)
 jobs:
   - job: Linux
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
-      - script: |
-          echo $(appVersion)
-          echo $(imageNameFront)
-          echo $(imageNameApi)
-          echo $(name)
-        displayName: 'Print variables'
       - task: Docker@1
         displayName: 'Build front image'
         inputs:
