@@ -5,5 +5,5 @@ jobs:
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
-      - script: docker-compose build
-        displayName: Build
+      - task: DockerCompose@0
+        displayName: Build images
