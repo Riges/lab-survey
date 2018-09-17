@@ -1,0 +1,9 @@
+variables:
+  imageNameFront: 'lab-survey-front:$(Build.BuildId)'
+jobs:
+  - job: Linux
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
+      - script: docker-compose build
+        displayName: Build
