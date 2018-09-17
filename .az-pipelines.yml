@@ -1,7 +1,11 @@
+name: 1.0.$(date:yyyyMMdd)$(rev:.rrr)
+trigger:
+  branches:
+    include:
+      - master
 variables:
   imageNameFront: lab-survey-front:$(Build.BuildNumber)
   imageNameApi: lab-survey-api:$(Build.BuildNumber)
-name: 1.0.$(date:yyyyMMdd)$(rev:.rrr)
 jobs:
   - job: Linux
     pool:
@@ -18,4 +22,4 @@ jobs:
         inputs:
           dockerFile: ./lab-survey-api/lab-survey-api/Dockerfile
           imageName: $(imageNameApi)
-          workingDirectory: ./lab-survey-api/lab-survey-api/
+          workingDirectory: ./lab-survey-api/lab-s  urvey-api/
