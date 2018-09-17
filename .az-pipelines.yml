@@ -9,10 +9,12 @@ jobs:
       - task: Docker@1
         displayName: 'Build front image'
         inputs:
+          dockerFile: ./lab-survey-front/Dockerfile
           imageName: 'lab-survey-front:$(Build.BuildId)'
-          workingDirectory: /lab-survey-front
+          workingDirectory: ./lab-survey-front
       - task: Docker@1
         displayName: 'Build api image'
         inputs:
+          dockerFile: ./lab-survey-api/lab-survey-api/Dockerfile
           imageName: $(imageNameApi)
-          workingDirectory: /lab-survey-api
+          workingDirectory: ./lab-survey-api/lab-survey-api/
