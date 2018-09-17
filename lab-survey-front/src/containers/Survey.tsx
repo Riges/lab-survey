@@ -38,5 +38,8 @@ class SurveyComponent extends React.Component<PropsFromDispatch & SurveyState> {
   }
 }
 
-const Survey = connect(mapStateToProps, mapDispatchToProps)(SurveyComponent);
+const Survey = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SurveyComponent);
 export default Survey;
