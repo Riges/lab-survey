@@ -1,9 +1,21 @@
 variables:
-  imageNameFront: 'lab-survey-front:$(Build.BuildId)'
+  imageNameFront: lab-survey-front:$(Build.BuildNumber)
+  imageNameApi: lab-survey-api:$(Build.BuildNumber)
+name: 1.0.$(date:yyyyMMdd)$(rev:.rrr)
 jobs:
   - job: Linux
     pool:
       vmImage: 'ubuntu-16.04'
     steps:
-      - script: docker-compose build
-        displayName: Build
+      - task: Docker@1
+        displayName: 'Build front image'
+        inputs:
+          dockerFile: ./lab-survey-front/Dockerfile
+          imageName: $(imageNameFront)
+          workingDirectory: ./lab-survey-front
+      - task: Docker@1
+        displayName: 'Build api image'
+        inputs:
+          dockerFile: ./lab-survey-api/lab-survey-api/Dockerfile
+          imageName: $(imageNameApi)
+          workingDirectory: ./lab-survey-api/lab-survey-api/
