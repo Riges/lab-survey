@@ -2,6 +2,10 @@ name: 1.0.$(date:yyyyMMdd)$(rev:.rrr)
 variables:
   imageNameFront: lab-survey-front:$(Build.BuildNumber)
   imageNameApi: lab-survey-api:$(Build.BuildNumber)
+trigger:
+  branches:
+    include:
+      - master
 jobs:
   - job: LabSurveyFront
     pool:
