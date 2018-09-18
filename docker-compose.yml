@@ -5,7 +5,7 @@ services:
     image: redis
     container_name: lab-survey-redis
     ports:
-        - "6379:6379"
+      - '6379:6379'
 
   lab-survey-api:
     image: lab-survey-api
@@ -17,7 +17,7 @@ services:
       REDIS: lab-survey-redis
       ASPNETCORE_ENVIRONMENT: Production
     ports:
-      - "8081:5000"
+      - '8081:5000'
 
   lab-survey-front:
     image: lab-survey-front
@@ -26,4 +26,4 @@ services:
       dockerfile: Dockerfile
     container_name: lab-survey-front
     ports:
-        - "8080:80"
+      - '8080:80'
