@@ -72,9 +72,9 @@
   dependencies:
     "@types/react" "*"
 
-"@types/redux-devtools-log-monitor@^1.0.33":
-  version "1.0.33"
-  resolved "https://registry.yarnpkg.com/@types/redux-devtools-log-monitor/-/redux-devtools-log-monitor-1.0.33.tgz#2432606c74250cac15fc74bb891762376b533a19"
+"@types/redux-devtools-log-monitor@^1.0.34":
+  version "1.0.34"
+  resolved "https://registry.yarnpkg.com/@types/redux-devtools-log-monitor/-/redux-devtools-log-monitor-1.0.34.tgz#09cbd9325d97e6f8a4084fab37db510fc79167c7"
   dependencies:
     "@types/base16" "*"
     "@types/react" "*"
