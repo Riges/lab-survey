@@ -60,11 +60,12 @@
   dependencies:
     csstype "^2.2.0"
 
-"@types/reactstrap@^5.0.20":
-  version "5.0.27"
-  resolved "https://registry.yarnpkg.com/@types/reactstrap/-/reactstrap-5.0.27.tgz#0973e83ac5db1ef70aedec73b8e2c2f51f97373d"
+"@types/reactstrap@^6.4.2":
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/@types/reactstrap/-/reactstrap-6.4.2.tgz#6164a66f5cb2b453a58b5a2fb542974484d4d665"
   dependencies:
     "@types/react" "*"
+    popper.js "^1.14.1"
 
 "@types/redux-devtools-dock-monitor@^1.1.32":
   version "1.1.32"
@@ -5401,6 +5402,10 @@ pluralize@^7.0.0:
 pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
+
+popper.js@^1.14.1:
+  version "1.14.4"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.4.tgz#8eec1d8ff02a5a3a152dd43414a15c7b79fd69b6"
 
 popper.js@^1.14.1:
   version "1.14.4"
