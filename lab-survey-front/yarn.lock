@@ -77,9 +77,9 @@
     "@types/react" "*"
     popper.js "^1.14.1"
 
-"@types/redux-devtools-dock-monitor@^1.1.32":
-  version "1.1.32"
-  resolved "https://registry.yarnpkg.com/@types/redux-devtools-dock-monitor/-/redux-devtools-dock-monitor-1.1.32.tgz#09103f3734de63a02fbd2d42618291061dd6fce0"
+"@types/redux-devtools-dock-monitor@^1.1.33":
+  version "1.1.33"
+  resolved "https://registry.yarnpkg.com/@types/redux-devtools-dock-monitor/-/redux-devtools-dock-monitor-1.1.33.tgz#9df918cbcfbab67be3c6b7c58ba22fe15afc7c7f"
   dependencies:
     "@types/react" "*"
 
