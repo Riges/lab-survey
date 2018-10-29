@@ -29,7 +29,7 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.0",
+    "@types/jest": "^23.3.8",
     "@types/lodash": "^4.14.104",
     "@types/luxon": "^1.4.0",
     "@types/node": "^9.4.6",
