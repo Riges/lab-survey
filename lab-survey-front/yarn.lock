@@ -50,6 +50,10 @@
   version "10.12.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.1.tgz#da61b64a2930a80fa708e57c45cd5441eb379d5b"
 
+"@types/prop-types@*":
+  version "15.5.6"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.6.tgz#9c03d3fed70a8d517c191b7734da2879b50ca26c"
+
 "@types/react-dom@^16.0.9":
   version "16.0.9"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.0.9.tgz#73ceb7abe6703822eab6600e65c5c52efd07fb91"
@@ -64,10 +68,11 @@
     "@types/react" "*"
     redux "^3.6.0"
 
-"@types/react@*", "@types/react@^16.0.40":
-  version "16.3.17"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.17.tgz#d59d1a632570b0713946ed9c2949d994773633c5"
+"@types/react@*", "@types/react@^16.7.6":
+  version "16.7.6"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.6.tgz#80e4bab0d0731ad3ae51f320c4b08bdca5f03040"
   dependencies:
+    "@types/prop-types" "*"
     csstype "^2.2.0"
 
 "@types/reactstrap@^6.4.2":
