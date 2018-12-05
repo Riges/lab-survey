@@ -6,7 +6,7 @@ COPY . .
 RUN dotnet publish -c Release -o out
 
 # build runtime image
-FROM microsoft/dotnet:2.1-aspnetcore-runtime-alpine
+FROM microsoft/dotnet:2.2-aspnetcore-runtime-alpine
 WORKDIR /app
 COPY --from=build-env /src/out ./
 ENV ASPNETCORE_URLS=http://+:5000
