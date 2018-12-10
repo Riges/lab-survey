@@ -100,9 +100,9 @@
     "@types/base16" "*"
     "@types/react" "*"
 
-"@types/redux-devtools@^3.0.43":
-  version "3.0.44"
-  resolved "https://registry.yarnpkg.com/@types/redux-devtools/-/redux-devtools-3.0.44.tgz#2781b87067b8aec3102d4cb4a478feb340df5259"
+"@types/redux-devtools@^3.0.45":
+  version "3.0.45"
+  resolved "https://registry.yarnpkg.com/@types/redux-devtools/-/redux-devtools-3.0.45.tgz#df7a24a0b6d3421c920a95945418474fb1fedc0f"
   dependencies:
     "@types/react" "*"
     redux "^3.6.0"
